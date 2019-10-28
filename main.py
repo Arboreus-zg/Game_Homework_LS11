@@ -30,7 +30,7 @@ while True:
 
     if guess == secret:
         score_list.append({"attempts": attempts, "date": str(datetime.datetime.now()), "player_name": player,
-                           "secret_number": secret, "wrong_guesse": wrong_guesses})
+                           "secret_number": secret, "wrong_guesses": wrong_guesses})
 
         with open("score_list.txt", "w") as score_file: \
                 score_file.write(json.dumps(score_list))
